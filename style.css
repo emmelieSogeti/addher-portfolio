@@ -1,0 +1,178 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #F0F0F0;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+
+/* --------------------------------------------------- General settings */
+h1 {
+    font-size: 102px;
+    line-height: 102px;
+    margin: 0;
+    margin-bottom: 10px;
+
+}
+h2 {
+    font-size: 62px;
+    line-height: 62px;
+}
+h3 {
+    font-size: 42px;
+    line-height: 42px;
+}
+p {
+    font-size: 26px;
+}
+.italic {
+    font-style: italic;
+}
+.re-write:before{
+    content: "like";
+    transition: ease-in-out 200ms all;
+}
+.re-write:hover:before {
+    content: "love";
+    color: #5B2333;
+}
+a {
+    color: #000;
+    font-weight: 800;
+    text-decoration: none;
+    font-family: 'Lato', san-serif;
+}
+section {
+    min-height: 100vh;
+}
+section .inner-section {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 132px;
+}
+.fadein {
+    animation: fadein 2000ms;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+        margin-left: -100px;
+    }
+    to {
+        opacity: 1;
+        margin-left: 0;
+    }
+}
+a.button {
+    background-color: #5B2333;
+    color: #F7f7f7;
+    padding: 16px 32px;
+    border-radius: 50px;
+    margin: 32px 0;
+    display: inline-block;
+}
+
+/* --------------------------------------------------- Avatar */ 
+.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: fixed;
+    top: 32px;
+    left: 32px;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, .5);;
+}
+.avatar img {
+    max-width: 100%;
+    transition: ease-in-out 200ms all;
+}
+.avatar:hover img {
+    transform: scale(105%);
+}
+
+/* --------------------------------------------------- Header */
+header {
+    position: fixed;
+    top: 32px;
+    right: 32px;
+}
+header nav {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+}
+header nav a {
+    font-weight: 800;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    padding: 8px;
+    transition: ease-in-out 200ms all;
+    position: relative;
+}
+header nav a:after {
+    content: "";
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+    background-color: #333;
+    display: block;
+    transition: all 200ms ease-in-out;
+}
+header nav a:hover {
+    color: #5B2333;
+}
+header nav a:hover:after {
+    width: 100%
+}
+header nav a:hover:before {
+    opacity: 1;
+}
+
+
+/* --------------------------------------------------- Intro section */ 
+section#intro {
+    display: flex;
+    align-items: center;
+     
+}
+
+/* --------------------------------------------------- About section */ 
+section#about {
+    background-color: #EAD7D1;
+    animation: gradientBackgroundColor 5000ms infinite;
+}
+
+@keyframes gradientBackgroundColor {
+    0% {background-color: #EAD7D1;}
+    50% {background-color: #C5ACA4;}
+    100% {background-color: #EAD7D1;}
+}
+
+/* --------------------------------------------------- Contact section */ 
+section#contact .content-wrapper {
+    display: flex;
+}
+.content-wrapper > div {
+    width: 50%;
+}
+.content-wrapper .image img {
+    max-width: 100%;
+}
+
+
+
+
+
+
